@@ -19,7 +19,7 @@ h2 {
     text-align: center;
 }
 
-hr{
+hr {
     border: none;
     border-top: 1px dotted #7febeb;
 }
@@ -32,8 +32,8 @@ img {
     filter: contrast(90%);
     filter: opacity(90%);
     filter: saturate(100%);
-    ;
     border: 0.2cm #7febeb solid;
+    align-items: center;
 }
 
 .text {
@@ -47,11 +47,20 @@ img {
     flex-direction: column;
     gap: 5px;
     align-items: center;
+    margin: 0;
+}
+
+.recepies {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
 }
 
 .container {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 25px;
     padding: 30px
 }
@@ -89,12 +98,28 @@ h4 {
 
 /* Tablet styles */
 @media (min-width: 601px) and (max-width: 1024px) {
-    h1 {
+    h1 {}
+
+    .recepie {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .recepies {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: left;
+    }
+
+    .container {
+        flex-direction: column;
     }
 }
 
 /* Wide screen styles */
 @media (min-width: 1025px) {
-    h1 {
-    }
+    h1 {}
 }
