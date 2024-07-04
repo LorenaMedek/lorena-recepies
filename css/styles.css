@@ -1,21 +1,31 @@
 body {
     font-size: 16px;
-
-    margin: 10px;
     padding: 0;
+    margin: 0;
+    background-color: #FFFFFF;
+    color: black;
 }
 
-h1 {
-    color: hsl(202, 77%, 58%);
-    font-size: 60px;
+.main-title {
+    font-size: 45px;
+    font-family: "Playfair Display", serif;
     text-align: center;
-    background-color: hsl(180, 73%, 71%);
-    margin-top: 0;
 }
 
-h2 {
-    color: #7febeb;
-    font-size: 40px;
+.subtitle {
+    font-size: 36px;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+}
+
+.recepie-title {
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+}
+
+.text {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
     text-align: center;
 }
 
@@ -25,60 +35,40 @@ hr {
 }
 
 img {
-    width: 370px;
-    border-radius: 75%;
-    padding: 0, 5%;
+    width: 350px;
+    height: 243px;
+    border-radius: 8px;
     filter: brightness(90%);
     filter: contrast(90%);
     filter: opacity(90%);
     filter: saturate(100%);
-    border: 0.2cm #7febeb solid;
     align-items: center;
 }
 
-.text {
-    font-size: 20px;
-    color: rgb(30, 130, 220);
-    text-align: center;
-}
-
-.recepie {
+.recepies {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
     align-items: center;
     margin: 0;
 }
 
-.recepies {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    align-items: center;
-}
-
-.container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.images-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
     gap: 25px;
-    padding: 30px
+    padding: 20px 200px;
 }
 
-h3 {
-    color: rgb(30, 130, 220);
-    text-align: center;
-    font-size: 20px;
+.text-container {
+    background-color: #FFD8CA;
+    padding: 48px;
 }
 
 p {
-    color: #7febeb;
-    text-align: center;
-}
-
-h4 {
-    font-size: 20px;
-    color: rgb(30, 130, 220);
+    margin: 0;
 }
 
 /* Mobile styles */
@@ -87,26 +77,15 @@ h4 {
         margin-top: 0;
     }
 
-    .container {
+    .images-container {
+        display: flex;
         flex-direction: column;
-    }
-
-    img {
-        width: 100%;
+        padding: 20px;
     }
 }
 
 /* Tablet styles */
-@media (min-width: 601px) and (max-width: 1024px) {
-    h1 {}
-
-    .recepie {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        align-items: center;
-    }
-
+@media (min-width: 601px) and (max-width: 1135px) {
     .recepies {
         display: flex;
         flex-direction: column;
@@ -114,12 +93,15 @@ h4 {
         align-items: left;
     }
 
-    .container {
+    .images-container {
+        display: flex;
         flex-direction: column;
     }
 }
 
 /* Wide screen styles */
 @media (min-width: 1025px) {
-    h1 {}
+    .images-container {
+        padding: 20px
+    }
 }
